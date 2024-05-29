@@ -1,0 +1,113 @@
+html {
+    background-color: #00DEB6;
+    color: rgb(38,38,54);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.main {
+    min-height: 80vh;
+}
+
+.container, 
+.buttons {
+    margin: 0 auto;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.reset-btn, 
+.play-btn {
+    background-color: #3A2B6F;
+    border: 2px solid #161615;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.reset-btn:hover, 
+.play-btn:hover {
+    background-color: #5D4B8F;
+}
+
+.reset-btn {
+    margin-top: 10px;
+    width: 206px;
+} 
+
+.play-btn {
+    background-color: #8D75D0;
+    width: 206px;
+}
+
+.scoretext {
+    font-weight: bold;
+}
+
+.message {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.messageText {
+    margin: 5px;
+}
+
+img {
+    width: 35%;
+    height: auto;
+}
+
+.hero-section {
+    min-height: 354px;
+}
+
+.hands {
+    min-height: 235px;
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+    img {
+        width: 35%; 
+    }
+
+    html {
+        font-size: 24px;
+    }
+}
+
+/* For desktop */
+@media (min-width: 1024px) {
+    img {
+        width: 40%; 
+    }
+
+    .hands,
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .hero-section {
+        min-height: 364px;
+    }
+    .hands {
+        min-height: 268px;
+    }
+}
