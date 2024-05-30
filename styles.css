@@ -1,15 +1,30 @@
+*,
+*::before,
+*::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
 html {
     background-color: #00DEB6;
     color: rgb(38,38,54);
     font-family: "Orbitron", sans-serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 16px;
+    font-size: 32px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 30px;
 }
 
 body {
     display: flex;
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     align-items: center;
 }
@@ -25,14 +40,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .reset-btn, 
 .play-btn {
     background-color: #3A2B6F;
     border: 2px solid #161615;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 5px;
     cursor: pointer;
     color: white;
@@ -44,17 +59,18 @@ body {
 }
 
 .reset-btn {
-    margin-top: 10px;
-    width: 206px;
+    margin-top: 20px;
+    width: 70%;
 } 
 
 .play-btn {
     background-color: #8D75D0;
-    width: 206px;
+    width: 70%;
 }
 
 .scoretext {
     font-weight: bold;
+    padding: 20px 0px;
 }
 
 .message {
@@ -75,7 +91,7 @@ img {
 }
 
 .hero-section {
-    min-height: 354px;
+    min-height: 408px;
 }
 
 .hands {
@@ -88,9 +104,10 @@ img {
         width: 35%; 
     }
 
-    html {
-        font-size: 24px;
-    }
+    .reset-btn,
+    .play-btn {
+        width: 70%;
+    } 
 }
 
 /* For desktop */
@@ -99,15 +116,31 @@ img {
         width: 40%; 
     }
 
+    html {
+        font-size: 30px;
+    }
+
+    .reset-btn,
+    .play-btn {
+        width: 25%;
+    } 
+
     .hands,
     .buttons {
         flex-direction: row;
         justify-content: center;
     }
     .hero-section {
-        min-height: 364px;
+        min-height: 430px;
     }
     .hands {
         min-height: 268px;
+    }
+}
+
+/* Larger desktop */
+@media (min-width: 1206px) {
+    .hero-section {
+        max-width: 1206px; 
     }
 }
